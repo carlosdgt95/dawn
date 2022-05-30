@@ -3,15 +3,19 @@ body{
     
     margin: 100px auto;
 }
-.triangulo{
-padding: 10px; 
-margin: 0px; 
-width: 90px;
-height: 500px;
+.prueba{
+    position: relative;
+}
+div.triangulo{
+    
+position: absolute;
 border-top: 50px solid transparent;
 border-bottom: 50px solid transparent;
 border-left: 100px solid white;
-float:left
+float:left;
+width: 500%;
+height: 100%;
+
 
 }
 div.logo {
