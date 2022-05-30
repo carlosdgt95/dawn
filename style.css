@@ -1,0 +1,23 @@
+body{
+    background-color: "797A75" ;
+    
+    margin: 100px auto;
+}
+.triangulo{
+padding: 10px; 
+margin: 0px; 
+width: 90px;
+height: 500px;
+border-top: 50px solid transparent;
+border-bottom: 50px solid transparent;
+border-left: 100px solid white;
+float:left
+
+}
+div.logo {
+    padding: 20px; 
+    margin: 50px; 
+    width: 500px;
+    height: 450px;
+    float: right;
+   }
