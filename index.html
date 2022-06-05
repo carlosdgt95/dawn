@@ -4,25 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="stylesheet" href="style.css">
     <title>Portafolio Carlos Gómez</title>
     
 </head>
-<body bgcolor="797A75">
+<body >
     
+    
+    <!-- inicio del controlbutton-->
     <div  class="controlButton1"> 
     <a href=#presentacion> <button name="Acercademi"><span>Acerca De Mi</span> </button> </a>
     <a href="#proyectoHabilidades"><button name="ProyectosHabilidades"><span>Proyectos y Habilidades</span></button></a>
     <a href="#contacto"><button name="Contacto"><span>Contacto</span></button></a>
+    </div>
+    <div class="imagenes">
+        <img class="p1"id="triangulo"  src="img/triangulo.png">
+        <img  class="p2;" id="logo" src="img/logo.png">
+    </div>
+    <!-- aqui cierra el button-->
     
-   
-    
-    <div class="logo"><img src="img/logo.png"></div>
-
+        <!-- presentacion inicia -->
     <div id="presentacion">
+        <div class="imgperfil"><img id="perfilIm"src ="img/perfil.png"/></div>
+        <!-- inicia acerca -->
         <div class="acerca">
             <h2>Acerca de mi:</h2>
             <p>Estudiante de ingeniería de computacion,promador por vacacion, buscar inovar para dar soluciones optimas</p>
+            
             <ul class="datosGeneral">
                 <li class="datos">
                     <span>Nombre: </span>
@@ -68,6 +77,7 @@
                     </ul>
                 </li>
             </ul>
+            <!-- inicia presentacion 2-->
             <div class="presentacion2">
                 <ul>
                     <h2>Idiomas</h2>
@@ -88,6 +98,8 @@
                     <li>Mysql</li>
                 </ul>
             </div>
+            <!-- termina presentacion 2 -->
+            <!-- inicia audio -->
             <div class="audio">
                 <h2> Curiosidades</h2>
                 <p>Me interesa mucho lo que se enfoca al tema de las vibraciones y energia, mostrare un audio en frecuencia 432hz que en lo personal me ayuda mucho</p>
@@ -96,10 +108,14 @@
                     tu navergador no es compatible con este audio
                 </audio>
             </div>
+            <!-- termina audio-->
         </div>
+        <!-- termina acerca -->
     </div>
-  
+    <!-- termina presentacion -->
+        <!-- inicia habilidades -->
     <div id="proyectoHabilidades">
+        <!-- inicia menu -->
         <div class=" menu">
            
             <form like action="http://www.google.com" method="get">
@@ -113,7 +129,10 @@
             </from>
          
         </div>
-       <table border="2">
+        <!-- termina menu-->
+        <!-- inicia table -->
+       <div class="table">
+        <table border="2">
         <caption>Habilidades</caption>
         <tbody>
             <tr>
@@ -137,15 +156,21 @@
             </tr>
         </tbody>
         </table>
+        </div>
+        <!-- fin table -->
+        <!-- inicia habilidades -->
+        </div>
 
 
-    </div>
+    <!-- inicia contacto -->
     <div id="contacto">
+        <!-- inicia mapa-->
         <div class="mapa">
             <h2>Oficina</h2>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127584.48529194968!2d-80.09640533750002!3d-2.1478802000000035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d72f925e5bfdb%3A0x327cdb9f7f4ba3b2!2sEscuela%20Superior%20Polit%C3%A9cnica%20del%20Litoral%20(ESPOL)!5e0!3m2!1ses!2sec!4v1654397307270!5m2!1ses!2sec" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    
         </div>
-
+        <!-- fin mapa -->
+       <!-- inicia acerca--> 
     <div class="acerca">
                 <ul class="tlf">
                 <li class="datos">
@@ -161,9 +186,12 @@
                 </li>
                </ul>
     </div>
+    <!-- fin acerca--> 
+   <!-- inicia formulario--> 
     <div class="fomulario">
         <h3>Deja un comentario o Realiza una consulta</h3>
         <form>
+            <!-- inicia datos--> 
             <div>
             <label for="coment">Comentarios</label>
             <textarea cols="45" rows="8"></textarea>
@@ -172,15 +200,24 @@
             <label for="email">correo electronico</label>
             <input placeholder="Correo Electronico" type="email" name="email">
             <input type="submit" value="Enviar">
+        </form>
+          <!-- fin de fomulario acerca--> 
         </div>
-        <div>
+        <!-- fin datos--> 
+        <!-- inicia logo--> 
+        <div class="imglogos">
             <img src="img/LogoLinkedin.png">
             <img src="img/gitLogo.png">
-            <img src="img/triangulo.png">
+            
         </div>
-
-        </form>
+        <!-- fin logos--> 
     </div>
+      <!-- fin de contacto--> 
+  
+
+        
+
+
    
 </body>
 </html>

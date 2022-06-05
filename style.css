@@ -1,27 +1,80 @@
+html,body{
+    height:100%;
+    width:100%;
+}
+
+#triangulo{
+    height: 120%;
+    width: 50%;
+    
+    transform:rotate(90deg);
+    -ms-transform:rotate(90deg); /* IE 9 */
+    -webkit-transform:rotate(90deg); /* Opera, Chrome, and Safari */
+}
 body{
-    background-color: "797A75" ;
+    margin: 0%;
+    border: 0px;
+    padding: 0%;
+    background: #797a75 ;
+    display: grid;
+    row-gap:  0.5rem;
+    column-gap: 0.5rem;
+    grid-template-areas: 'r11''r12' 'r13'
+                        'r21' 'r21' 'r21' 
+                        'r0' 'r0' 'r0'
+                        'r31' 'r31' 'r31'
+                        ;
     
-    margin: 100px auto;
 }
-.prueba{
-    position: relative;
+.controlButton1{
+    grid-area: r12;
 }
-div.triangulo{
-    
-position: absolute;
-border-top: 50px solid transparent;
-border-bottom: 50px solid transparent;
-border-left: 100px solid white;
-float:left;
-width: 500%;
-height: 100%;
+
+.imagenes{
+    grid-area: r21;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 0.5rem;
+    column-gap: 0.5rem;
+  }
 
 
+.p1{
+    width: 48%;}
+
+.p2{
+    width: 48%;
 }
-div.logo {
-    padding: 20px; 
-    margin: 50px; 
-    width: 500px;
-    height: 450px;
-    float: right;
-   }
+#presentacion{
+    grid-area: 31;
+    display: grid;
+    row-gap:  0.5rem;
+    column-gap: 0.5rem;
+    grid-template-areas: 'a a1 a2'
+                        'b a1 b2'
+    ;
+    
+}
+
+#perfilIm {
+    
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    
+ 
+}
+
+
+#presentacion .imgperfil{
+    grid-area: a;
+    height:200px;
+    width: 300px;
+}
+.acerca{
+    grid-area: a1;
+}
+.presentacion2{
+    grid-area: b;
+}
