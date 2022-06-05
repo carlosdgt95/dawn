@@ -4,8 +4,8 @@ html,body{
 }
 
 #triangulo{
-    height: 120%;
-    width: 50%;
+    display: flex;
+
     
     transform:rotate(90deg);
     -ms-transform:rotate(90deg); /* IE 9 */
@@ -19,17 +19,21 @@ body{
     display: grid;
     row-gap:  0.5rem;
     column-gap: 0.5rem;
-    grid-template-areas: 'r11''r12' 'r13'
+    grid-template-areas: 'r11' 'r12' 'r13'
                         'r21' 'r21' 'r21' 
                         'r0' 'r0' 'r0'
                         'r31' 'r31' 'r31'
-                        ;
+                        'r1' 'r1' 'r1'
+                        'r41' 'r41' 'r41';
     
 }
 .controlButton1{
     grid-area: r12;
 }
-
+#logo{
+    display: flex;
+   
+}
 .imagenes{
     grid-area: r21;
     display: flex;
@@ -49,10 +53,13 @@ body{
 #presentacion{
     grid-area: 31;
     display: grid;
+    grid-auto-columns: 500px;
+
     row-gap:  0.5rem;
     column-gap: 0.5rem;
     grid-template-areas: 'a a1 a2'
                         'b a1 b2'
+                        'c c c'
     ;
     
 }
@@ -65,7 +72,9 @@ body{
     
  
 }
-
+.audio{
+    grid-area:c ;
+}
 
 #presentacion .imgperfil{
     grid-area: a;
@@ -77,4 +86,24 @@ body{
 }
 .presentacion2{
     grid-area: b;
+}
+#proyectoHabilidades{
+    grid-area: 41;
+}
+.table{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;    
+}
+#java{
+    width: 30%;
+    height: 30%;
+}
+#python{
+    width: 30%;
+    height: 30%;
+}
+#c {
+    width: 30%;
+    height: 30%;
 }
