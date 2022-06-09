@@ -19,44 +19,66 @@ body{
     display: grid;
     row-gap:  0.5rem;
     column-gap: 0.5rem;
-    grid-template-areas: 'r11' 'r12' 'r13'
-                        'r21' 'r21' 'r21' 
-                        'r0' 'r0' 'r0'
-                        'r31' 'r31' 'r31'
-                        'r1' 'r1' 'r1'
-                        'r41' 'r41' 'r41';
+    grid-template-areas: 'r11 r11 r11'
+                        'r21 r21 r21' 
+                        'r0 r0 r0'
+                        'r31 r31 r31'
+                        'r1 r1 r1'
+                        'r41  r41 r41'
+                        'r51 r52 r52'
+                        'r61 r62 r63'
+                        'r71 r71 r71';
+                        
     
 }
 .controlButton1{
-    grid-area: r12;
-}
-#logo{
-    display: flex;
-   
-}
+    grid-area: r11;
+    justify-self:center}
+    
+
 .imagenes{
     grid-area: r21;
-    display: flex;
-    justify-content: space-between;
+   /* justify-content: space-between;
     flex-wrap: wrap;
     row-gap: 0.5rem;
     column-gap: 0.5rem;
-  }
+*/  
+display: grid;
+
+grid-auto-columns: 500px;
+
+row-gap:  0.5rem;
+column-gap: 0.5rem;
 
 
-.p1{
-    width: 48%;}
 
-.p2{
-    width: 48%;
+grid-template-areas: 'x y z'
+;
 }
+    
+  #logo{
+       display:grid;
+grid-area: z;
+    
+    
+}
+#triangulo{
+    display:grid;
+    grid-area: x;
+}
+
+
 #presentacion{
-    grid-area: 31;
+    grid-area: r31;
     display: grid;
+    justify-self:center;
     grid-auto-columns: 500px;
 
     row-gap:  0.5rem;
     column-gap: 0.5rem;
+
+
+    
     grid-template-areas: 'a a1 a2'
                         'b a1 b2'
                         'c c c'
@@ -88,7 +110,8 @@ body{
     grid-area: b;
 }
 #proyectoHabilidades{
-    grid-area: 41;
+    grid-area: r41;
+    justify-self:center;
 }
 .table{
     height: 100%;
@@ -106,4 +129,54 @@ body{
 #c {
     width: 30%;
     height: 30%;
+}
+#contacto{
+    grid-area: r51;
+    justify-self:center;
+    display: grid;
+    grid-auto-columns: 300px;
+    
+
+    row-gap:  0.5rem;
+    column-gap: 0.5rem;
+
+
+    
+    grid-template-areas: 'f1 f2 f3'
+    ;
+
+
+}
+.mapa{
+    grid-area:f1;
+}
+.acerca1{
+    grid-area: f3;
+}
+.fomulario1{
+    grid-area: r61;
+    
+}
+.imglogos{
+    grid-area: r62;
+  
+       
+    ;
+}
+.imglogos{
+    padding: 0;
+    grid-area: r71;
+}
+
+#linked1{
+ 
+   
+    width: 10%;
+    height: 10%;
+}
+#git1{
+
+    width: 10%;
+    height: 10%;
+
 }
