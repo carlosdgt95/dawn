@@ -3,14 +3,7 @@ html,body{
     width:100%;
 }
 
-#triangulo{
-    display: flex;
 
-    
-    transform:rotate(90deg);
-    -ms-transform:rotate(90deg); /* IE 9 */
-    -webkit-transform:rotate(90deg); /* Opera, Chrome, and Safari */
-}
 body{
     margin: 0%;
     border: 0px;
@@ -31,24 +24,23 @@ body{
                         
     
 }
-.controlButton1{
+#controlButton1{
     grid-area: r11;
     justify-self:center}
     
 
-.imagenes{
+#imagenes{
+    display: grid;
     grid-area: r21;
-   /* justify-content: space-between;
+    justify-content: space-between;
     flex-wrap: wrap;
     row-gap: 0.5rem;
     column-gap: 0.5rem;
-*/  
-display: grid;
 
+/*display: grid;
 grid-auto-columns: 500px;
-
 row-gap:  0.5rem;
-column-gap: 0.5rem;
+column-gap: 0.5rem;*/
 
 
 
@@ -56,16 +48,23 @@ grid-template-areas: 'x y z'
 ;
 }
     
-  #logo{
+#logo{
        display:grid;
 grid-area: z;
     
     
 }
 #triangulo{
-    display:grid;
     grid-area: x;
+    display:grid;
+    transform:rotate(90deg);
+    -ms-transform:rotate(90deg); /* IE 9 */
+    -webkit-transform:rotate(90deg); /* Opera, Chrome, and Safari */
+    
 }
+
+
+
 
 
 #presentacion{
@@ -153,30 +152,86 @@ grid-area: z;
 .acerca1{
     grid-area: f3;
 }
-.fomulario1{
+#fomulario1{
     grid-area: r61;
     
 }
-.imglogos{
-    grid-area: r62;
-  
-       
-    ;
+#fomulario1{
+    grid-area: r61;
+    
 }
-.imglogos{
-    padding: 0;
+
+#imglogos2{
     grid-area: r71;
+    padding: 0;
+    
 }
 
 #linked1{
  
    
-    width: 10%;
-    height: 10%;
+    width: 30%;
+    height: 30%;
 }
 #git1{
 
-    width: 10%;
-    height: 10%;
+    width: 30%;
+    height: 30%;
 
+}
+
+
+
+
+@media  ( max-width:360px) {
+    body{
+        display: grid;
+        grid-template-columns: 1fr;
+        
+        background-color: aqua;
+    }
+    
+
+    #presentacion{
+        
+        background-color: blueviolet;
+        display: grid;
+       
+        justify-content: center;
+       grid-column: 1fr;
+     
+        
+    }
+    .acerca{
+       
+        background-color: yellow;  
+    }
+    #perfilIm {
+         
+        height: auto;
+        width: 100%;
+        object-fit: contain;
+     
+    }
+    .presentacion2{
+        
+        background-color: green; 
+      
+    }   
+    #proyectoHabilidades{
+        background-color: red;
+    }
+    #contacto{
+        background-color: azure;
+
+    }
+    #fomulario1{
+        background-color: black;
+    }
+    #imglogos2{
+        background-color: blue;
+    }
+    #imagenes{
+        background-color: royalblue;
+    }
 }
