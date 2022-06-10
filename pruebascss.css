@@ -186,7 +186,7 @@ grid-area: z;
 
 
 
-@media  ( max-width:360px) {
+@media  ( max-width: 360px) {
     body{
         display: grid;
         grid-template-columns: 1fr;

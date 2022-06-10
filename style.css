@@ -2,7 +2,9 @@ html,body{
     height:100%;
     width:100%;
 }
-
+h2{
+    text-align: center;
+  }
 
 body{
     margin: 0%;
@@ -186,15 +188,18 @@ grid-area: z;
     height: 30%;
 
 }
+.menu{
+    text-align: center;
+}
 
 
 
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+
+@media  ( max-width: 360px) {
     body{
         display: grid;
         grid-template-columns: 1fr;
-        
         
         background-color: aqua;
     }
@@ -204,15 +209,13 @@ grid-area: z;
         
         background-color: blueviolet;
         display: grid;
-        grid-template-columns: 1fr;
-       
+        grid-template-columns:1fr;
      
         
     }
     .acerca{
         display: grid;
         background-color: yellow;  
-        height: 25%;
     }
     #perfilIm {
         display: grid;
@@ -233,29 +236,19 @@ grid-area: z;
     }
  
     #proyectoHabilidades{
-        background-color: white;
-        display: grid;
-        grid-template-columns: 1fr;
+        background-color: red;
     }
     #contacto{
         background-color: azure;
-        display: grid;
-        grid-template-columns: 1fr;
 
     }
     #fomulario1{
         background-color: black;
-        display: grid;
-        grid-template-columns: 1fr;
     }
     #imglogos2{
         background-color: blue;
-        display: grid;
-        grid-template-columns: 1fr;
     }
     #imagenes{
         background-color: royalblue;
-        display: grid;
-        grid-template-columns: 1fr;
     }
 }
