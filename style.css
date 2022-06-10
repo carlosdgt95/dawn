@@ -204,7 +204,12 @@ grid-area: z;
         background-color: aqua;
     }
     
+    .table1{
+        justify-self:center;
+        padding: auto;
+        width: 50%;
 
+    }
     #presentacion{
         
         background-color: blueviolet;
@@ -237,9 +242,13 @@ grid-area: z;
  
     #proyectoHabilidades{
         background-color: red;
+        display: grid;
+        grid-template-columns:1fr;
+
     }
     #contacto{
         background-color: azure;
+        
 
     }
     #fomulario1{
