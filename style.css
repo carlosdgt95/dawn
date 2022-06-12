@@ -1,263 +1,232 @@
 html,body{
     height:100%;
     width:100%;
-}
-h2{
-    text-align: center;
-  }
+    margin: 0;
+    font-family: "Poppins", Arial, sans-serif;
 
+font-size: 16px;
+line-height: 1.8;
+font-weight: 400;
+
+}
 body{
     margin: 0%;
     border: 0px;
     padding: 0%;
-    background: #797a75 ;
+    background: #1a69c4 ;
     display: grid;
     row-gap:  0.5rem;
     column-gap: 0.5rem;
-    grid-template-areas: 'r11 r11 r11'
-                        'r21 r21 r21' 
-                        'r0 r0 r0'
-                        'r31 r31 r31'
-                        'r1 r1 r1'
-                        'r41  r41 r41'
-                        'r51 r52 r52'
-                        'r61 r62 r63'
-                        'r71 r71 r71';
+    grid-template-areas: 'r11'
+                        'r22'
+                       
+                        'r31 '
                         
+                        'r41'
+                        'r51'
+                        'r61'
+                        'r71'
+                     ;
     
 }
-#controlButton1{
-    grid-area: r11;
-    justify-self:center}
-    
 
-#imagenes{
-    display: grid;
-    grid-area: r21;
-    justify-content: space-between;
+header{
+grid-area: r11;
+display: flex;
+justify-content: space-between;
+width: auto;
+
+
+}
+.imglogo1{
+    display: flex;
+    max-width: 220px;
+}
+
+img {
+    max-width: 400px;
+}
+
+    .inicio{
+        height: 500px;
+        width: 100%;
+        grid-area: r22;
+        background-image: url("img/fondo.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        row-gap: 0.5rem;
+        column-gap: 0.5rem;
+        font-size:50px;
+        
+            
+        
+}
+
+    
+.inicio .c1{
+    color: #318aac !important;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0.5em 1.2em;
+  background: rgba(0,0,0,0);
+  border: 2px solid;
+  border-color: #318aac;
+  transition: all 1s ease;
+  position: relative;
+
+}
+.inicio .c1:hover {
+    background: #318aac;
+    color: #fff !important;
+  }
+.c1:hover:before {
+width: 100%;
+}
+#presentacion {
+   display: flex;
+    grid-area: r31;
+
     flex-wrap: wrap;
     row-gap: 0.5rem;
-    column-gap: 0.5rem;
-
-/*display: grid;
-grid-auto-columns: 500px;
-row-gap:  0.5rem;
-column-gap: 0.5rem;*/
-
-
-
-grid-template-areas: 'x y z'
-;
+    row-gap: 0.5rem;
+    justify-content: space-between;
 }
-    
-#logo{
-       display:grid;
-grid-area: z;
-    
-    
+#presentacion .fila1p {
+    padding: 0;
+    margin: 0;
+    width: 50%;
 }
-#triangulo{
-    grid-area: x;
-    display:grid;
-    transform:rotate(90deg);
-    -ms-transform:rotate(90deg); /* IE 9 */
-    -webkit-transform:rotate(90deg); /* Opera, Chrome, and Safari */
-    
+#perfilIm{
+    max-height: 50%;
+    max-width: 50%;
 }
-
-
-
-
-
-#presentacion{
-    grid-area: r31;
-    display: grid;
-    justify-self:center;
-    grid-auto-columns: 500px;
-
-    row-gap:  0.5rem;
-    column-gap: 0.5rem;
-
-
-    
-    grid-template-areas: 'a a1 '
-                        'b a1  '
-                        'c c '
-    ;
-    
-}
-
-#perfilIm {
-
-    height: 100%;
+#presentacion .audio{
     width: 100%;
-    object-fit: contain;
-    
- 
-}
-.audio{
-    grid-area:c ;
-}
-
-.imgperfil{
-    grid-area: a;
-    height:200px;
-    width: 300px;
-}
-.acerca{
-    grid-area: a1;
-}
-.presentacion2{
-    display: grid;
-    justify-self:center;
-    grid-area: b;
 }
 #proyectoHabilidades{
-    grid-area: r41;
-    display: grid;
-    justify-self:center;
-    grid-auto-columns: 500px;
-
-    row-gap:  0.5rem;
-    column-gap: 0.5rem;
-}
+height:100%;
+width: 100%;
+grid-area: r41;}
 .table{
-    height: 100%;
-    width: 100%;
-    object-fit: contain;    
-}
-#java{
-    width: 30%;
-    height: 30%;
-}
-#python{
-    width: 30%;
-    height: 30%;
-}
-#c {
-    width: 30%;
-    height: 30%;
-}
-#contacto{
-    grid-area: r51;
-    justify-self:center;
-    display: grid;
-    grid-auto-columns: 300px;
-    
-
-    row-gap:  0.5rem;
-    column-gap: 0.5rem;
-
-
-    
-    grid-template-areas: 'f1 f2 f3'
-    ;
-
-
-}
-.mapa{
-    grid-area:f1;
-}
-.acerca1{
-    grid-area: f3;
-}
-#fomulario1{
-    grid-area: r61;
-    
-}
-#fomulario1{
-    grid-area: r61;
-    
-}
-
-#imglogos2{
-    grid-area: r71;
-    padding: 0;
-    
-}
-
-#linked1{
- 
-   
-    width: 30%;
-    height: 30%;
-}
-#git1{
-
-    width: 30%;
-    height: 30%;
-
-}
-.menu{
-    text-align: center;
-}
-
-
-
-
-
-@media  ( max-width: 360px) {
-    body{
-        display: grid;
-        grid-template-columns: 1fr;
-        
-        background-color: aqua;
-    }
-    
-    .table1{
-        justify-self:center;
-        padding: auto;
-        width: 50%;
-
-    }
-    #presentacion{
-        
-        background-color: blueviolet;
-        display: grid;
-        grid-template-columns:1fr;
-     
-        
-    }
-    .acerca{
-        display: grid;
-        background-color: yellow;  
-    }
-    #perfilIm {
-        display: grid;
-        height: auto;
+        height: 100%;
         width: 100%;
-        object-fit: contain;
-     
-    }
-    .presentacion2{
-        display: grid;
-        background-color: green; 
-      
-    }   
-    .imgperfil{
-        
-    width: 100%;
-    height: auto;
-    }
- 
-    #proyectoHabilidades{
-        background-color: red;
-        display: grid;
-        grid-template-columns:1fr;
-
-    }
-    #contacto{
-        background-color: azure;
-        
-
-    }
-    #fomulario1{
-        background-color: black;
-    }
-    #imglogos2{
-        background-color: blue;
-    }
-    #imagenes{
-        background-color: royalblue;
-    }
+        object-fit: contain;    
 }
+    #java{
+        width: 30%;
+        height: 30%;
+    }
+    #python{
+        width: 30%;
+        height: 30%;
+    }
+    #c {
+        width: 30%;
+        height: 30%;
+    }
+#contacto{
+    display: flex;
+        height:100%;
+    width: 100%;
+        grid-area: r51;
+        flex-wrap: wrap;
+        row-gap: 0.5rem;
+        row-gap: 0.5rem;
+        justify-content: space-between;
+    }
+    #formulario{
+        grid-area: r61;
+    }
+
+    #contacto .fila2p {
+        width: 50%;
+    }   
+    
+
+    #imglogos2{
+        grid-area: r71;
+        padding: 0;
+        
+    }
+    
+    #linked1{
+     
+       
+        width: 30%;
+        height: 30%;
+    }
+    #git1{
+    
+        width: 30%;
+        height: 30%;
+    
+    }
+    .menu{
+        text-align: center;
+    }
+    
+
+    @media  ( max-width: 360px) {
+        body{
+            display: grid;
+            grid-template-columns: 1fr;
+            
+            background-color: aqua;
+        }
+
+        #presentacion{
+        
+            background-color: blueviolet;
+            display: grid;
+            grid-template-columns:1fr;
+         
+            
+        }
+        .acerca{
+            display: grid;
+            background-color: yellow;  
+        }
+        #perfilIm {
+            display: grid;
+            height: auto;
+            width: 100%;
+            object-fit: contain;
+         
+        }
+        .presentacion2{
+            display: grid;
+            background-color: green; 
+          
+        }   
+        .imgperfil{
+            
+        width: 100%;
+        height: auto;
+        }
+
+        #proyectoHabilidades{
+            background-color: red;
+            display: grid;
+            grid-template-columns:1fr;
+    
+        }
+        #contacto{
+            background-color: azure;
+            
+    
+        }
+        #fomulario1{
+            background-color: black;
+        }
+        #imglogos2{
+            background-color: blue;
+        }
+        #imagenes{
+            background-color: royalblue;
+        }
+    }    

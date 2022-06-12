@@ -6,26 +6,54 @@
     <meta name="viewport" content="width=device-width">
     
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width">
     <title>Portafolio Carlos Gómez</title>
     
 </head>
 <body >
-    
-    
+    <header>
+        
+        <h1>Portafolio Carlos Danilo Gomez Tello</h1>
+        <img class="imglogo1"src="img/logo1.png">
+        
+            <!-- aqui cierra el button-->
+    </header>
+    <div class="inicio">
+        <div  class="boton "id="controlButton1"> 
+        <a href=#presentacion  class="c1"> <span> Presentacion</span></a>
+        <a href="#proyectoHabilidades" class="c1" ><span> Proyecto y habilidades</span></a>
+        <a href="#contacto"  class="c1"> <span> Contacto</span> </a>
+        </div></div>
     <!-- inicio del controlbutton-->
-    <div  id="controlButton1"> 
-    <a href=#presentacion> <button name="Acercademi"><span>Acerca De Mi</span> </button> </a>
-    <a href="#proyectoHabilidades"><button name="ProyectosHabilidades"><span>Proyectos y Habilidades</span></button></a>
-    <a href="#contacto"><button name="Contacto"><span>Contacto</span></button></a>
-    </div>
-
-    <div id="imagenes">
-        <img class="p1" id="triangulo"  src="img/triangulo.png">
-        <img  class="p2"  id="logo" src="img/logo.png">
-    </div>
-    <!-- aqui cierra el button-->
+   
     <div id="presentacion">
-        <div class="imgperfil"><img id="perfilIm"src ="img/perfil.png"/></div>
+        <div class="fila1p">
+            <div class="imgperfil"><img id="perfilIm" src ="img/perfil.png"/></div>
+            <div class="presentacion2">
+                <ul>
+                    <h2>Idiomas</h2>
+                    <li>
+                        <span>Español:</span>
+                        <span>Nativo</span>
+                    </li>   
+                    <li>
+                        <span>Ingles:</span>
+                        <span>Intermedio B2</span>
+                    </li>
+                </ul>
+                <ul>
+                    <h2>Conocimiento en Informatica</h2>
+                    <li>Python</li>   
+                    <li>Java</li>
+                    <li>Linux</li>
+                    <li>Mysql</li>
+                </ul>
+            </div>
+        
+        
+            <!-- inicia audio -->
+      </div>
+      <div class="fila1p">
         <div class="acerca">
             <h2>Acerca de mi:</h2>
             <p>Estudiante de ingeniería de computacion,promador por vacacion, buscar inovar para dar soluciones optimas</p>
@@ -77,29 +105,11 @@
             </ul>
             
             <!-- termina presentacion 2 -->
-            <!-- inicia audio -->
-
+        
     </div>
-    <div class="presentacion2">
-        <ul>
-            <h2>Idiomas</h2>
-            <li>
-                <span>Español:</span>
-                <span>Nativo</span>
-            </li>   
-            <li>
-                <span>Ingles:</span>
-                <span>Intermedio B2</span>
-            </li>
-        </ul>
-        <ul>
-            <h2>Conocimiento en Informatica</h2>
-            <li>Python</li>   
-            <li>Java</li>
-            <li>Linux</li>
-            <li>Mysql</li>
-        </ul>
-    </div>
+      </div>
+    
+  
     <!-- inicia audio -->
     <div class="audio">
         <h2> Curiosidades</h2>
@@ -111,6 +121,9 @@
     </div>
     <!-- termina audio-->
     </div>
+
+
+
     <div id="proyectoHabilidades">
         <h2>Habilidade y Proyectos</h2>
         <!-- inicia menu -->
@@ -158,18 +171,21 @@
         <!-- fin table -->
         <!-- inicia habilidades -->
         </div>
-    <!-- contacto -->
+    
 
-</div>
-<div id="contacto">
+
+    <div id="contacto">
     <!-- inicia mapa-->
+    <div class="fila2p">
     <div class="mapa">
         <h2>Oficina</h2>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127584.48529194968!2d-80.09640533750002!3d-2.1478802000000035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d72f925e5bfdb%3A0x327cdb9f7f4ba3b2!2sEscuela%20Superior%20Polit%C3%A9cnica%20del%20Litoral%20(ESPOL)!5e0!3m2!1ses!2sec!4v1654397307270!5m2!1ses!2sec" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    
     </div>
+</div>
     <!-- fin mapa -->
    <!-- inicia acerca--> 
-<div class="acerca1">
+   <div class="fila2p">
+   <div class="acerca1">
     <h2>Datos de Contacto: </h2>
             <ul class="tlf">
             <li class="datos">
@@ -184,8 +200,10 @@
                 </ul>
             </li>
            </ul>
+           </div>
 </div>
-</div>
+    </div>
+
 
 <!-- inicia formulario--> 
 <div id="fomulario1">
@@ -202,12 +220,12 @@
         <input type="submit" value="Enviar"></div>
     </form>
       <!-- fin de fomulario acerca--> 
-</div>
-<div id="imglogos2">
-    <h2>Cuentas: </h2>
-    <a id="linked" tittle="linked" href="http://www.google.com"><img  id="linked1"  src="img/LogoLinkedin.png"></a>
-    <a id="git" tittle="git" href="http://www.google.com"><img  id="git1" src="img/gitLogo.png"></a>
- 
+    </div>
 
+
+    <div id="imglogos2">
+        <h2>Cuentas: </h2>
+        <a id="linked" tittle="linked" href="http://www.google.com"><img  id="linked1"  src="img/LogoLinkedin.png"></a>
+        <a id="git" tittle="git" href="http://www.google.com"><img  id="git1" src="img/gitLogo.png"></a></div>
 </body>
 </html>
