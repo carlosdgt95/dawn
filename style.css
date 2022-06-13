@@ -9,6 +9,12 @@ line-height: 1.8;
 font-weight: 400;
 
 }
+div:hover{
+
+
+    transform:  scale(1.02);
+    backface-visibility: hidden;    
+}
 body{
     margin: 0%;
     border: 0px;
@@ -95,18 +101,25 @@ width: 100%;
     row-gap: 0.5rem;
     row-gap: 0.5rem;
     justify-content: space-between;
+    
 }
 #presentacion .fila1p {
     padding: 0;
     margin: 0;
-    width: 50%;
+    width: 45%;
+    border: solid white;
+    border-radius: 20px;
 }
 #perfilIm{
     max-height: 50%;
     max-width: 50%;
+    border: solid white;
+    border-radius: 20px;
 }
 #presentacion .audio{
     width: 100%;
+    border: solid white;
+    border-radius: 20px;
 }
 #proyectoHabilidades{
 height:100%;
@@ -116,7 +129,16 @@ grid-area: r41;}
         height: 100%;
         width: 100%;
         object-fit: contain;    
+       
+        font-size: 12px;    margin: 45px;     width: 480px; text-align: left;    border-collapse: collapse;
 }
+th {     font-size: 13px;     font-weight: normal;     padding: 8px;     background: #b9c9fe;
+    border-top: 4px solid #aabcfe;    border-bottom: 1px solid #fff; color: #039; }
+
+td {    padding: 8px;     background:transparent;     border-bottom: 1px solid #fff;
+    color: black;    border-top: 1px solid transparent; }
+
+tr:hover td { background: transparent; color: #339; }
     #java{
         width: 30%;
         height: 30%;
