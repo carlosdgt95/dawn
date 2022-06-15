@@ -83,6 +83,36 @@ img {
         
 }
 
+
+  .google-maps {
+    position: relative;
+    padding-bottom: 75%; 
+    height: 0;
+    overflow: hidden;
+    
+    display: flex;
+    border: solid blue;
+    border-radius: 20px;
+  }
+  .google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    
+    display: flex;
+    border: solid blue;
+    border-radius: 20px;
+  }
+.menu .D1 input[type="submit"]:hover{
+    -webkit-transform: translateY(-5px);
+transform: translateY(-5px);
+}
+
+
+
+
     
 .inicio .c1{
     color: black !important;
@@ -99,6 +129,7 @@ img {
 .inicio .c1:hover {
     background: #318aac;
     color: #fff !important;
+    
   }
 .c1:hover:before {
 width: 100%;
@@ -113,8 +144,17 @@ width: 100%;
     justify-content: space-between;
     
 }
+h1{
+    color: white;
+}
+p{
+    color:white;
+}
+li{
+    color:white;
+}
 #presentacion .a{
-    color: green;
+    color: blue;
 }
 #presentacion .b{
     color: white;
@@ -140,18 +180,23 @@ width: 100%;
 #proyectoHabilidades{
 height:100%;
 width: 100%;
-grid-area: r41;}
+grid-area: r41;
+
+border: solid white;
+border-radius: 20px;}
 .table{
         height: 100%;
         width: 100%;
         object-fit: contain;    
+        
+        display: table-cell;
        
         font-size: 12px;    margin: 45px;     width: 480px; text-align: left;    border-collapse: collapse;
 }
-th {     font-size: 13px;     font-weight: normal;     padding: 8px;     background: #b9c9fe;
-    border-top: 4px solid #aabcfe;    border-bottom: 1px solid #fff; color: #039; }
+th {   text-align: center;  font-size: 13px;     font-weight: normal;     padding: 8px;     background: #b9c9fe;
+    border-top: 4px solid #ffffff;    border-bottom: 1px solid #fff; color: #039; }
 
-td {    padding: 8px;     background:transparent;     border-bottom: 1px solid #fff;
+td {    text-align: center; padding: 8px;     background:transparent;     border-bottom: 1px solid #fff;
     color: black;    border-top: 1px solid transparent; }
 
 tr:hover td { background: transparent; color: #339; }
@@ -179,10 +224,22 @@ tr:hover td { background: transparent; color: #339; }
     }
     #formulario{
         grid-area: r61;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        border: solid white;
+        border-radius: 20px;
+        display: flex; flex-direction: column;
     }
+
 
     #contacto .fila2p {
         width: 50%;
+        padding: 0;
+        margin: 0;
+        width: 45%;
+        border: solid white;
+        border-radius: 20px;
     }   
     
 
@@ -211,13 +268,24 @@ tr:hover td { background: transparent; color: #339; }
     }
     
 
-    @media  ( max-width: 360px) {
+    @media only screen and (min-width: 100px) and (max-width: 768px){
         body{
             display: grid;
             grid-template-columns: 1fr;
             
             background-color: aqua;
         }
+        img{
+        width: 100%;
+        height: auto;
+    
+ 
+
+    }
+  
+  .inicio .c1{
+    display: flex; flex-direction: column;
+  }
 
         #presentacion{
         
@@ -256,12 +324,13 @@ tr:hover td { background: transparent; color: #339; }
     
         }
         #contacto{
-            background-color: azure;
+            background-color: goldenrod;
             
     
         }
-        #fomulario1{
-            background-color: black;
+        #fomulario1 form{
+            background-color: white;
+            display: flex; flex-direction: column;
         }
         #imglogos2{
             background-color: blue;
@@ -269,4 +338,4 @@ tr:hover td { background: transparent; color: #339; }
         #imagenes{
             background-color: royalblue;
         }
-    }    
+    }
