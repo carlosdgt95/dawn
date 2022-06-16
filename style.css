@@ -222,14 +222,17 @@ tr:hover td { background: transparent; color: #339; }
         row-gap: 0.5rem;
         justify-content: space-between;
     }
-    #formulario{
-        grid-area: r61;
-        padding: 0;
-        margin: 0;
-        display: flex;
+
+    #imglogos2{
         border: solid white;
         border-radius: 20px;
-        display: flex; flex-direction: column;
+
+    }
+    .fomularioC{
+        grid-area: r61;
+        border: solid white;
+        border-radius: 20px;
+        
     }
 
 
@@ -246,6 +249,9 @@ tr:hover td { background: transparent; color: #339; }
     #imglogos2{
         grid-area: r71;
         padding: 0;
+        padding: 0%;
+        height: auto;
+        text-align: center;
         
     }
     
@@ -318,7 +324,7 @@ tr:hover td { background: transparent; color: #339; }
         }
 
         #proyectoHabilidades{
-            background-color: red;
+            background-color: teal;
             display: grid;
             grid-template-columns:1fr;
     
@@ -328,8 +334,11 @@ tr:hover td { background: transparent; color: #339; }
             
     
         }
-        #fomulario1 form{
-            background-color: white;
+        .fomularioC{
+            background-color: purple;
+        }
+        .fomulario1 form{
+            
             display: flex; flex-direction: column;
         }
         #imglogos2{
