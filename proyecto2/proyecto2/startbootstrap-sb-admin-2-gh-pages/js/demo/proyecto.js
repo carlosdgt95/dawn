@@ -4,7 +4,7 @@ let cargarDatos = () => {
  
 
     fetch("https://dataserverdaw.herokuapp.com/escritores/xml")
-        .then(response => response.json())
+        .then(response => response.text())
         .then(data => {
 
             const parser = new DOMParser();
@@ -18,7 +18,7 @@ let cargarDatos = () => {
 
                 let plantilla = `<option value="${id}">${nombre}</options>`
 
-                document.querySelector('div.input-group1> select').innerHTML += plantilla
+                document.querySelector('div.input-group1 > select').innerHTML += plantilla
             }
 
         })

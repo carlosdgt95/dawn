@@ -31,36 +31,53 @@ let cargarDatos = () => {
 }
 let cargarimg= () => {
     let plantilla1=''
-    fetch("https://api.jikan.moe/v3/search/anime?q=animes")
+    let plantilla2=''
+    let plantilla3=''
+        fetch("https://api.jikan.moe/v3/search/anime?q=animes")
         .then(response => response.json())
         .then(data => {
             let arrayImg=[]
             let contador=0
-          
+            let tituloseleccionado=document.querySelector(".tituloGeneral")
+            let tit=document.querySelectorAll("h1")
             let seccionimg=document.querySelector(".imagesAnimer")
             let seleccion=document.querySelector('div.input-group1 > select')
+            let synopsis=document.querySelector(".descripcion")
             
             let indice=seleccion.selectedIndex;
             let opcionSeleccionada=seleccion.options[indice]
-            console.log("pruebaaaaaaaaaaaaaaaaaaaaaaaaaaa"+ JSON.stringify(opcionSeleccionada.text))
+            //console.log("pruebaaaaaaaaaaaaaaaaaaaaaaaaaaa"+ JSON.stringify(opcionSeleccionada.text))
             
             for(let element of data['results']){
                 title1=data['results'][contador]["title"]
                 let imgAnime=data['results'][contador]["image_url"]
                 arrayImg.push(imgAnime)
                 
-             
-                
+                let descripcion=data['results'][contador]["synopsis"]
+                //console.log(title1)
                 contador+=1  
+                
+               
+                           
 
-             console.log(JSON.stringify(title1))
+             //console.log(JSON.stringify(title1))
          for (let datoImg in arrayImg){
 
             
             linkOnly = arrayImg[datoImg]
-            console.log(opcionSeleccionada==title1)
+            //console.log(opcionSeleccionada==title1)
             if(JSON.stringify(opcionSeleccionada.text) === JSON.stringify(title1)){
-                console.log("holi")
+                //console.log("holi")
+                plantilla3=`     
+                <div class="tituloGeneral">
+                <h1 >${title1}</h1>
+                
+            </div>
+
+        
+                `
+                //
+                tituloseleccionado.innerHTML=plantilla3
             plantilla1=`
         
             <div class="card border-left-warning shadow h-100 py-2">
@@ -83,6 +100,27 @@ let cargarimg= () => {
             seccionimg.innerHTML = plantilla1
             
       
+               
+            plantilla2=`
+        
+            <div class="descripcion">
+            <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                           <!--cambios-->
+                           <p class="descripcionAnime">${descripcion}</p>
+                        </div>
+                        <div class="col-auto">
+                           <!--cambios-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+                       `
+        synopsis.innerHTML=plantilla2
              
             }
     }
