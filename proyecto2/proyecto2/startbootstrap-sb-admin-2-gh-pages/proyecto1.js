@@ -1,12 +1,4 @@
 
-function compareNumbers(a, b) {
-    return a - b;
-  }
-  var numbers = [4, 2, 5, 1, 3];
-numbers.sort(function(a, b) {
-  return [a - b];
-});
-console.log(numbers);
 
 
 let cargarGrafico=()=>{
@@ -14,52 +6,121 @@ let cargarGrafico=()=>{
     fetch("https://api.jikan.moe/v3/search/anime?q=animes")
     .then(response => response.json())
     .then(datas => {
+    let seccionimg5=document.querySelector(".imagenAni")
     let graficas=document.querySelector(".chart-area>.graficas1")
     let titulos=[]
     let puntuacion=[]
-    var puntuacionMayor=[]
-    let titulosMayor=[]
+ 
+    let urls=[]
     //tener datos de nombre y puntuacion
     contador=0
     for(let element of datas['results']){
         let title=datas['results'][contador]["title"]
         let score=datas['results'][contador]["score"]
+        let url=datas['results'][contador]["image_url"]
         titulos.push(title)
         puntuacion.push(score)
-        
+        urls.push(url)  
         contador+=1
-        console.log(puntuacion[contador])
+        //console.log(puntuacion[contador])
     }
-    console.log(puntuacion)
+    //console.log(puntuacion)
     puntuacioncopia=[]
     puntuacioncopia=puntuacion.slice().sort().reverse()
     
-    console.log(puntuacioncopia)
-    console.log("despues",puntuacion)
+    //console.log(puntuacioncopia)
+    //console.log("despues",puntuacion)
     //tener indicie
     presentarTitulo=[]
     presentarpuntuacion=[]
+    presentarimagenes=[]
     for ( var i=0;i<5;i++){
         indices=puntuacion.indexOf(puntuacioncopia[i]) 
         console.log("aaaa",puntuacioncopia[i], indices)
         presentarpuntuacion.push(puntuacioncopia[i])
         presentarTitulo.push(titulos[indices])
-        
+        presentarimagenes.push(urls[indices])
     }
-    console.log(presentarTitulo)
-    console.log(presentarpuntuacion)
+    
+   
+        
+    ////diseño
+    
+
+
+    
+    console.log(presentarimagenes)
+    //console.log(presentarpuntuacion)
     presentarTitulocortos=[]
     cont=0
     for (let element of presentarTitulo){
         element=element.split(",")
-        console.log(element)
+        //console.log(element)
         //element=element.split(":")
         let titulo1=element[cont].split(":")
-        console.log("holll",titulo1[0])
+        //console.log("holll",titulo1[0])
         presentarTitulocortos.push(titulo1[0])
 
     }
-console.log("aaaaaaaaaa",presentarTitulocortos)
+    seccionimg5.innerHTML=`  <div class="imagenAni">
+
+    <!-- Project Card Example -->
+    <div class="containerImg5">
+        <div class="card-header py-3">
+            
+            <div class="imagenAni">
+                <div class="card bg-primary text-white shadow">
+                    <div class="card-body">
+                    ${presentarTitulocortos[0]}
+                        <div class="text-white-50 small"></div>
+                        <img src=${presentarimagenes[0]}" width=190px>
+                    </div>
+                </div>
+            </div>
+            <div class="imagenAni">
+                <div class="card bg-success text-white shadow">
+                    <div class="card-body">
+                    ${presentarTitulocortos[1]}
+                        <div class="text-white-50 small"></div>
+                        <img src=${presentarimagenes[1]} width=190px>
+                    </div>
+                </div>
+            </div>
+            <div class="imagenAni">
+                <div class="card bg-info text-white shadow">
+                    <div class="card-body">
+                    ${presentarTitulocortos[2]}
+                        <div class="text-white-50 small"></div>
+                        <img src=${presentarimagenes[2]} width=180px>
+                    </div>
+                </div>
+            </div>
+            <div class="imagenAni">
+                <div class="card bg-warning text-white shadow">
+                    <div class="card-body">
+                    ${presentarTitulocortos[3]}
+                        <div class="text-white-50 small"></div>
+                        <img src=${presentarimagenes[3]} width=190px>
+                    </div>
+                </div>
+            </div>
+            <div class="imagenAni">
+                <div class="card bg-danger text-white shadow">
+                    <div class="card-body">
+                    ${presentarTitulocortos[4]}
+                        <div class="text-white-50 small"></div>
+                        <img src=${presentarimagenes[4]} width=190px>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        </div>
+        
+    </div>`
+
+//console.log("aaaaaaaaaa",presentarTitulocortos)
 
     new Chart(graficas, {
         type: 'bar',

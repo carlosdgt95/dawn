@@ -1,0 +1,10 @@
+.card-header:first-child {
+    border-radius: calc(.35rem - 1px) calc(.35rem - 1px) 0 0;
+    display: flex;
+    justify-content: center;
+  }
+.imagenAni>img{
+    margin:10px auto;
+    display:block;
+
+}
