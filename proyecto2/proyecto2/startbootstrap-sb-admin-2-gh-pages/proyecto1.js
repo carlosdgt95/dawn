@@ -1,4 +1,102 @@
+
+function compareNumbers(a, b) {
+    return a - b;
+  }
+  var numbers = [4, 2, 5, 1, 3];
+numbers.sort(function(a, b) {
+  return [a - b];
+});
+console.log(numbers);
+
+
+let cargarGrafico=()=>{
+    
+    fetch("https://api.jikan.moe/v3/search/anime?q=animes")
+    .then(response => response.json())
+    .then(datas => {
+    let graficas=document.querySelector(".chart-area>.graficas1")
+    let titulos=[]
+    let puntuacion=[]
+    var puntuacionMayor=[]
+    let titulosMayor=[]
+    //tener datos de nombre y puntuacion
+    contador=0
+    for(let element of datas['results']){
+        let title=datas['results'][contador]["title"]
+        let score=datas['results'][contador]["score"]
+        titulos.push(title)
+        puntuacion.push(score)
+        
+        contador+=1
+        console.log(puntuacion[contador])
+    }
+    console.log(puntuacion)
+    puntuacioncopia=[]
+    puntuacioncopia=puntuacion.slice().sort().reverse()
+    
+    console.log(puntuacioncopia)
+    console.log("despues",puntuacion)
+    //tener indicie
+    presentarTitulo=[]
+    presentarpuntuacion=[]
+    for ( var i=0;i<5;i++){
+        indices=puntuacion.indexOf(puntuacioncopia[i]) 
+        console.log("aaaa",puntuacioncopia[i], indices)
+        presentarpuntuacion.push(puntuacioncopia[i])
+        presentarTitulo.push(titulos[indices])
+        
+    }
+    console.log(presentarTitulo)
+    console.log(presentarpuntuacion)
+    presentarTitulocortos=[]
+    cont=0
+    for (let element of presentarTitulo){
+        element=element.split(",")
+        console.log(element)
+        //element=element.split(":")
+        let titulo1=element[cont].split(":")
+        console.log("holll",titulo1[0])
+        presentarTitulocortos.push(titulo1[0])
+
+    }
+console.log("aaaaaaaaaa",presentarTitulocortos)
+
+    new Chart(graficas, {
+        type: 'bar',
+        data: {
+          labels: presentarTitulocortos,
+          datasets: [
+            {
+              label: "Population (millions)",
+              backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
+              data: presentarpuntuacion
+            }
+          ]
+        },
+        options: {
+          legend: { display: false },
+          title: {
+            display: true,
+            text: 'Top 5 de animes'
+          }
+        }
+    });
+})
+   
+
+ 
+
+
+   
+  
+
+}
+
+    
 let cargarDatos = () => {
+    
+       
+    
     fetch("https://api.jikan.moe/v3/search/anime?q=animes")
         .then(response => response.json())
         .then(data => {
@@ -47,6 +145,9 @@ let cargarimg= () => {
             let indice=seleccion.selectedIndex;
             let opcionSeleccionada=seleccion.options[indice]
             //console.log("pruebaaaaaaaaaaaaaaaaaaaaaaaaaaa"+ JSON.stringify(opcionSeleccionada.text))
+            
+                        
+            //////////////////////////////
             
             for(let element of data['results']){
                 title1=data['results'][contador]["title"]
@@ -133,8 +234,11 @@ let cargarimg= () => {
         
     })}
 
+
 window.addEventListener('DOMContentLoaded', (event) => {
     cargarDatos()
+    cargarGrafico()
+  
 
 });
 window.addEventListener('change', (event) => {
