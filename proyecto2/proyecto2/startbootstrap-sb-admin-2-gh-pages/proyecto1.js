@@ -276,6 +276,7 @@ let cargarimg= () => {
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                            <!--cambios-->
+                           <h2>Descripcion:</h2>
                            <p class="descripcionAnime">${descripcion}</p>
                         </div>
                         <div class="col-auto">
