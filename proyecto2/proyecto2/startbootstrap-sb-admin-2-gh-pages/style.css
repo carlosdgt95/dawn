@@ -1,10 +1,61 @@
 .card-header:first-child {
-    border-radius: calc(.35rem - 1px) calc(.35rem - 1px) 0 0;
-    display: flex;
-    justify-content: center;
+    border-radius: calc(.35rem - 1px) calc(.35rem - 1px) 0 0 !important;
+    display: flex !important;
+    justify-content: center !important;
   }
 .imagenAni>img{
-    margin:10px auto;
-    display:block;
+    margin:10px auto !important;
+    display:block !important;
+
 
 }
+.imagenAni .sticker-img {
+    position: relative !important;
+    width: 180px !important;
+    height: 180px !important;
+    margin: 50px !important;
+  
+}
+.btn {
+    box-sizing: border-box;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 0.5em;
+    color: white;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
+    font-size: 1rem;
+    font-weight: 100;
+    line-height: 1;
+    margin: 5px;
+    padding: 0.5em 1.0em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 10;
+  }
+  .btn:hover, .btn:focus {
+    color: #fff;
+    outline: 0;
+  }
+  
+  .c {
+    border-color: #3498db;
+    color: #fff;
+    box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+  }
+  .c:hover {
+    box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+  }

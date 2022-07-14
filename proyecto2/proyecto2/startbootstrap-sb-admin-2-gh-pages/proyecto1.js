@@ -10,7 +10,7 @@ let cargarGrafico=()=>{
     let graficas=document.querySelector(".chart-area>.graficas1")
     let titulos=[]
     let puntuacion=[]
- 
+    let descripcionA=[]
     let urls=[]
     //tener datos de nombre y puntuacion
     contador=0
@@ -18,13 +18,15 @@ let cargarGrafico=()=>{
         let title=datas['results'][contador]["title"]
         let score=datas['results'][contador]["score"]
         let url=datas['results'][contador]["image_url"]
+        let descripcionAni=datas['results'][contador]["synopsis"]
         titulos.push(title)
         puntuacion.push(score)
         urls.push(url)  
+        descripcionA.push(descripcionAni)
         contador+=1
         //console.log(puntuacion[contador])
     }
-    //console.log(puntuacion)
+    console.log(descripcionA)
     puntuacioncopia=[]
     puntuacioncopia=puntuacion.slice().sort().reverse()
     
@@ -34,12 +36,14 @@ let cargarGrafico=()=>{
     presentarTitulo=[]
     presentarpuntuacion=[]
     presentarimagenes=[]
+    presentarDescripcion=[]
     for ( var i=0;i<5;i++){
         indices=puntuacion.indexOf(puntuacioncopia[i]) 
         console.log("aaaa",puntuacioncopia[i], indices)
         presentarpuntuacion.push(puntuacioncopia[i])
         presentarTitulo.push(titulos[indices])
         presentarimagenes.push(urls[indices])
+        presentarDescripcion.push(descripcionA[indices])
     }
     
    
@@ -49,7 +53,8 @@ let cargarGrafico=()=>{
 
 
     
-    console.log(presentarimagenes)
+    console.log(presentarDescripcion)
+    console.log(presentarDescripcion[0])
     //console.log(presentarpuntuacion)
     presentarTitulocortos=[]
     cont=0
@@ -71,45 +76,45 @@ let cargarGrafico=()=>{
             <div class="imagenAni">
                 <div class="card bg-primary text-white shadow">
                     <div class="card-body">
-                    ${presentarTitulocortos[0]}
+                    <button class="btn c" data-balloon-length="xlarge" aria-label="${presentarDescripcion[0]}" data-balloon-pos="up">${presentarTitulocortos[0]}</button>
                         <div class="text-white-50 small"></div>
-                        <img src=${presentarimagenes[0]}" width=190px>
+                        <img class="cambios" src=${presentarimagenes[0]}" width=190px>
                     </div>
                 </div>
             </div>
             <div class="imagenAni">
                 <div class="card bg-success text-white shadow">
                     <div class="card-body">
-                    ${presentarTitulocortos[1]}
+                    <button class="btn c" data-balloon-length="xlarge" aria-label="${presentarDescripcion[1]}" data-balloon-pos="up">${presentarTitulocortos[1]}</button>
                         <div class="text-white-50 small"></div>
-                        <img src=${presentarimagenes[1]} width=190px>
+                        <img  class="cambios" src=${presentarimagenes[1]} width=190px>
                     </div>
                 </div>
             </div>
             <div class="imagenAni">
                 <div class="card bg-info text-white shadow">
                     <div class="card-body">
-                    ${presentarTitulocortos[2]}
+                    <button class="btn c" data-balloon-length="xlarge" aria-label="${presentarDescripcion[2]}" data-balloon-pos="up">${presentarTitulocortos[2]}</button>
                         <div class="text-white-50 small"></div>
-                        <img src=${presentarimagenes[2]} width=180px>
+                        <img class="cambios" src=${presentarimagenes[2]} width=180px>
                     </div>
                 </div>
             </div>
             <div class="imagenAni">
                 <div class="card bg-warning text-white shadow">
                     <div class="card-body">
-                    ${presentarTitulocortos[3]}
+                    <button class="btn c" data-balloon-length="xlarge" aria-label="${presentarDescripcion[3]}" data-balloon-pos="up" >${presentarTitulocortos[3]}</button>
                         <div class="text-white-50 small"></div>
-                        <img src=${presentarimagenes[3]} width=190px>
+                        <img  class="cambios" src=${presentarimagenes[3]} width=175px>
                     </div>
                 </div>
             </div>
             <div class="imagenAni">
                 <div class="card bg-danger text-white shadow">
                     <div class="card-body">
-                    ${presentarTitulocortos[4]}
+                    <button class="btn c" data-balloon-length="xlarge" aria-label="${presentarDescripcion[4]}" data-balloon-pos="up">${presentarTitulocortos[4]}</button>
                         <div class="text-white-50 small"></div>
-                        <img src=${presentarimagenes[4]} width=190px>
+                        <img  class="cambios" src=${presentarimagenes[4]} width=190px>
                     </div>
                 </div>
             </div>
@@ -295,7 +300,7 @@ let cargarimg= () => {
         
     })}
 
-
+ 
 window.addEventListener('DOMContentLoaded', (event) => {
     cargarDatos()
     cargarGrafico()
