@@ -16,7 +16,7 @@
     margin: 50px !important;
   
 }
-.btn {
+.btn1 {
     box-sizing: border-box;
     -webkit-appearance: none;
        -moz-appearance: none;
@@ -44,7 +44,7 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 10;
   }
-  .btn:hover, .btn:focus {
+  .btn1:hover, .btn:focus {
     color: #fff;
     outline: 0;
   }
