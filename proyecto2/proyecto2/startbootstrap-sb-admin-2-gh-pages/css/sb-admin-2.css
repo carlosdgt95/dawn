@@ -201,6 +201,12 @@ figure {
 img {
   vertical-align: middle;
   border-style: none;
+  border-style: none;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+
 }
 
 svg {
