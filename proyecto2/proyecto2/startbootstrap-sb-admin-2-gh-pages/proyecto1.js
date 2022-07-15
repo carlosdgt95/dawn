@@ -164,27 +164,31 @@ let cargarDatos = () => {
        
     
     fetch("https://api.jikan.moe/v3/search/anime?q=animes")
+    
         .then(response => response.json())
         .then(data => {
             let seleccion=document.querySelector('div.input-group1 > select')
-            
-            
+          
             //for(let i ;i<data.results.length;i++){
                // console.log(data.results[i].url)
                 //debugger
                 
             //}
-           
+            
             let contador=0
             for(let element of data['results']){
                 let title=data['results'][contador]["title"]
                 let id=data['results'][contador]["mal_id"]
+               
               
               
                 contador+=1
                 let plantilla = `<option value="${id}">${title}</options>`
+                
+                
 
            seleccion.innerHTML+=plantilla
+          
                 
             }
             
@@ -197,9 +201,11 @@ let cargarimg= () => {
     let plantilla1=''
     let plantilla2=''
     let plantilla3=''
+    let plantillatabla=''
         fetch("https://api.jikan.moe/v3/search/anime?q=animes")
         .then(response => response.json())
         .then(data => {
+            let selecciontabla=document.querySelector('div.tabla') 
             let arrayImg=[]
             let contador=0
             let tituloseleccionado=document.querySelector(".tituloGeneral")
@@ -218,6 +224,8 @@ let cargarimg= () => {
             for(let element of data['results']){
                 title1=data['results'][contador]["title"]
                 let imgAnime=data['results'][contador]["image_url"]
+                let type=data['results'][contador]["type"]
+                let episodios=data['results'][contador]["episodes"]
                 arrayImg.push(imgAnime)
                 
                 let descripcion=data['results'][contador]["synopsis"]
@@ -243,6 +251,17 @@ let cargarimg= () => {
 
         
                 `
+                plantillatabla=` <TABLE BORDER>
+                <TR>
+                    <TH>Titulos</TH> <TH>reproducion</TH> <TH>episodios</TH> 
+                </TR>
+                <TR>
+                    <TD>${title1}</TD> <TD>${type}</TD> <TD>${episodios}</TD> 
+                </TR>
+              
+            </TABLE>`
+
+ selecciontabla.innerHTML=plantillatabla
                 //
                 tituloseleccionado.innerHTML=plantilla3
             plantilla1=`
