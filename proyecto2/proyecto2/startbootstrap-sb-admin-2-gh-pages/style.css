@@ -16,6 +16,15 @@
     margin: 50px !important;
   
 }
+.tituloGeneral{
+  display: flex;
+  justify-content: center;
+  color: red;
+}
+.row .imagesAnimer .card-body .imagesAnimer1{
+  display: flex;
+  justify-content: center;
+}
 .btn1 {
     box-sizing: border-box;
     -webkit-appearance: none;
