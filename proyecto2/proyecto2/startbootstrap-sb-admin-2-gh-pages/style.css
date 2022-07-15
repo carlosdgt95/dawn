@@ -1,6 +1,6 @@
 .card-header:first-child {
     border-radius: calc(.35rem - 1px) calc(.35rem - 1px) 0 0 !important;
-    display: flex !important;
+    display: flex!important;
     justify-content: center !important;
   }
 .imagenAni>img{
@@ -24,6 +24,12 @@
 .row .imagesAnimer .card-body .imagesAnimer1{
   display: flex;
   justify-content: center;
+}
+
+.imagesAnimer1{
+display: flex;
+align-items: center;
+/* flex-direction: column; */
 }
 .btn1 {
     box-sizing: border-box;

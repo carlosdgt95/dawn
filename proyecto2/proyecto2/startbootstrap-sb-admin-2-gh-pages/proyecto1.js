@@ -269,9 +269,11 @@ let cargarimg= () => {
             <div class="card border-left-warning shadow h-100 py-2">
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
-                    <div class="imagesAnimer1">
+                    <div class="imagesAnimer1 d-flex">
                         <!--cambios--->
+                        
                         <img class="img1" src="${linkOnly}">
+                        <p class="descripcionAnime p-2"> <h4>Descripcion:</h4>  ${descripcion}   </p>
                     </div>
                     <div class="col-auto">
                         <!--cambios--->
@@ -287,27 +289,27 @@ let cargarimg= () => {
             
       
                
-            plantilla2=`
+        //     plantilla2=`
         
-            <div class="descripcion">
-            <div class="card border-left-success shadow h-100 py-2">
-                <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                           <!--cambios-->
-                           <h2>Descripcion:</h2>
-                           <p class="descripcionAnime">${descripcion}</p>
-                        </div>
-                        <div class="col-auto">
-                           <!--cambios-->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        //     <div class="descripcion">
+        //     <div class="card border-left-success shadow h-100 py-2">
+        //         <div class="card-body">
+        //             <div class="row no-gutters align-items-center">
+        //                 <div class="col mr-2">
+        //                    <!--cambios-->
+        //                    <h2>Descripcion:</h2>
+        //                    <p class="descripcionAnime">${descripcion}</p>                      
+        //                 </div>
+        //                 <div class="col-auto">
+        //                    <!--cambios-->
+        //                 </div>
+        //             </div>
+        //         </div>
+        //     </div>
+        // </div>
    
-                       `
-        synopsis.innerHTML=plantilla2
+        //                `
+        // synopsis.innerHTML=plantilla2
              
             }
     }
