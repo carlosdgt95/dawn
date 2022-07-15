@@ -109,7 +109,7 @@ let cargarGrafico=()=>{
                     
                     <button class="btn1 c" data-balloon-length="xlarge" aria-label="${presentarDescripcion[3]}" data-balloon-pos="up" >${presentarTitulocortos[3]}</button>
                         <div class="text-white-50 small"></div>
-                        <img  class="cambios" src=${presentarimagenes[3]} width=175px>
+                        <img  class="cambios" src=${presentarimagenes[3]} width=190px>
                     
                 </div>
             </div>
@@ -118,7 +118,7 @@ let cargarGrafico=()=>{
                     
                     <button class="btn1 c" data-balloon-length="xlarge" aria-label="${presentarDescripcion[4]}" data-balloon-pos="up">${presentarTitulocortos[4]}</button>
                         <div class="text-white-50 small"></div>
-                        <img  class="cambios" src=${presentarimagenes[4]} width=190px>
+                        <img  class="cambios" src=${presentarimagenes[4]} width=190px >
                     
                 </div>
             </div>
