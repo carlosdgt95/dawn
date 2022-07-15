@@ -26,7 +26,7 @@ let cargarGrafico=()=>{
         contador+=1
         //console.log(puntuacion[contador])
     }
-    console.log(descripcionA)
+    // console.log(descripcionA)
     puntuacioncopia=[]
     puntuacioncopia=puntuacion.slice().sort().reverse()
     
@@ -39,7 +39,7 @@ let cargarGrafico=()=>{
     presentarDescripcion=[]
     for ( var i=0;i<5;i++){
         indices=puntuacion.indexOf(puntuacioncopia[i]) 
-        console.log("aaaa",puntuacioncopia[i], indices)
+        //console.log("aaaa",puntuacioncopia[i], indices)
         presentarpuntuacion.push(puntuacioncopia[i])
         presentarTitulo.push(titulos[indices])
         presentarimagenes.push(urls[indices])
@@ -53,8 +53,8 @@ let cargarGrafico=()=>{
 
 
     
-    console.log(presentarDescripcion)
-    console.log(presentarDescripcion[0])
+    // console.log(presentarDescripcion)
+    // console.log(presentarDescripcion[0])
     //console.log(presentarpuntuacion)
     presentarTitulocortos=[]
     cont=0
