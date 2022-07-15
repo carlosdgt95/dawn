@@ -19,7 +19,7 @@
 .tituloGeneral{
   display: flex;
   justify-content: center;
-  color: red;
+  color: blue;
 }
 .row .imagesAnimer .card-body .imagesAnimer1{
   display: flex;

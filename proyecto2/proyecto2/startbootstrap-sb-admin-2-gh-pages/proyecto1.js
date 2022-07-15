@@ -68,60 +68,66 @@ let cargarGrafico=()=>{
 
     }
     seccionimg5.innerHTML=`  <div class="imagenAni">
-
+    
     <!-- Project Card Example -->
+    <div class="card shadow mb-4">
+    <h6 class="m-0 font-weight-bold text-primary">Clasificacion top 5 de animes</h6>
+    <p>(poner el mouse encima del titulo para su descripcion)</p>
     <div class="containerImg5">
+    
         <div class="card-header py-3">
             
             <div class="imagenAni">
                 <div class="card bg-primary text-white shadow">
-                    <div class="card-body">
+                    
                     <button class="btn1 c" data-balloon-length="xlarge" aria-label="${presentarDescripcion[0]}" data-balloon-pos="up">${presentarTitulocortos[0]}</button>
                         <div class="text-white-50 small"></div>
                         <img class="cambios" src=${presentarimagenes[0]}" width=190px>
-                    </div>
+                    
                 </div>
             </div>
             <div class="imagenAni">
                 <div class="card bg-success text-white shadow">
-                    <div class="card-body">
+                    
                     <button class="btn1 c" data-balloon-length="xlarge" aria-label="${presentarDescripcion[1]}" data-balloon-pos="up">${presentarTitulocortos[1]}</button>
                         <div class="text-white-50 small"></div>
                         <img  class="cambios" src=${presentarimagenes[1]} width=190px>
-                    </div>
+                    
                 </div>
             </div>
             <div class="imagenAni">
                 <div class="card bg-info text-white shadow">
-                    <div class="card-body">
+                    
                     <button class="btn1 c" data-balloon-length="xlarge" aria-label="${presentarDescripcion[2]}" data-balloon-pos="up">${presentarTitulocortos[2]}</button>
                         <div class="text-white-50 small"></div>
                         <img class="cambios" src=${presentarimagenes[2]} width=180px>
-                    </div>
+                    
                 </div>
             </div>
             <div class="imagenAni">
                 <div class="card bg-warning text-white shadow">
-                    <div class="card-body">
+                    
                     <button class="btn1 c" data-balloon-length="xlarge" aria-label="${presentarDescripcion[3]}" data-balloon-pos="up" >${presentarTitulocortos[3]}</button>
                         <div class="text-white-50 small"></div>
                         <img  class="cambios" src=${presentarimagenes[3]} width=175px>
-                    </div>
+                    
                 </div>
             </div>
             <div class="imagenAni">
                 <div class="card bg-danger text-white shadow">
-                    <div class="card-body">
+                    
                     <button class="btn1 c" data-balloon-length="xlarge" aria-label="${presentarDescripcion[4]}" data-balloon-pos="up">${presentarTitulocortos[4]}</button>
                         <div class="text-white-50 small"></div>
                         <img  class="cambios" src=${presentarimagenes[4]} width=190px>
-                    </div>
+                    
                 </div>
             </div>
             
         </div>
 
         </div>
+        </div>
+
         
     </div>`
 
@@ -253,10 +259,10 @@ let cargarimg= () => {
                 `
                 plantillatabla=` <TABLE BORDER>
                 <TR>
-                    <TH>Titulos</TH> <TH>reproducion</TH> <TH>episodios</TH> 
+                    <TH><FONT COLOR="0000FF">Titulos</TH> <TH><FONT COLOR="#008000">reproducion</TH> <TH><FONT COLOR="#40CFFF">episodios</TH> 
                 </TR>
                 <TR>
-                    <TD>${title1}</TD> <TD>${type}</TD> <TD>${episodios}</TD> 
+                    <TD>${title1}</TD> <TD>${type}</TD> <TD>${episodios} </TD> 
                 </TR>
               
             </TABLE>`
