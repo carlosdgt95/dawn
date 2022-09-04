@@ -568,12 +568,20 @@ pre code {
   .container, .container-sm {
     max-width: 540px;
   }
+  .containerImg5 .card-header{
+    flex-direction: column;
+  }
+  
 }
 
 @media (min-width: 768px) {
   .container, .container-sm, .container-md {
     max-width: 720px;
   }
+  .containerImg5 .card-header{
+    flex-direction: column;
+  }
+  
 }
 
 @media (min-width: 992px) {
@@ -991,8 +999,8 @@ pre code {
 }
 
 @media (min-width: 768px) {
-  .containerImg5{
-    display: flex; flex-direction: column;
+  .containerImg5 .card-header{
+    flex-direction: column;
   }
   .col-md {
     flex-basis: 0;
@@ -10868,6 +10876,9 @@ a:focus {
 @media (min-width: 768px) {
   .chart-pie {
     height: calc(20rem - 43px) !important;
+  }
+  .containerImg5{
+    flex-direction: column;
   }
 }
 

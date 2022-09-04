@@ -41,7 +41,14 @@ img{
 .imagesAnimer1{
 display: flex;
 align-items: center;
+flex-direction: column;
 /* flex-direction: column; */
+}
+.containerImg5{
+  display: flex;
+align-items: center;
+flex-direction: column;
+
 }
 .btn1 {
     box-sizing: border-box;

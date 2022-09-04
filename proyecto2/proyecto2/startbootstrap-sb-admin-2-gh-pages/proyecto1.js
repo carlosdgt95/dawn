@@ -273,9 +273,9 @@ let cargarimg= () => {
             plantilla1=`
         
             <div class="card border-left-warning shadow h-100 py-2">
-            <div class="card-body">
+            <div class="card-body sytle="flex-direction:columm;" >
                 <div class="row no-gutters align-items-center">
-                    <div class="imagesAnimer1 d-flex">
+                    <div class="imagesAnimer1 d-flex flex-wrap">
                         <!--cambios--->
                         
                         <img class="img1" src="${linkOnly}">
